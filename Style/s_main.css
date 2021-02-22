@@ -1,82 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #262323;
-}
-
-#wrapper_navbar {
-    background-image: url(https://i.redd.it/n6gqrbpaeda31.png);
-    background-size: cover;
-    background-position-x: center;
-
-    width: 100%;
-    height: 100vh;
-}
-
-#container_header {
-    display: flex;
-    justify-content: space-between;
-}
-
-#container_navbar {
-    display: flex;
-    margin: 20px 0 0 20px ;
-}
-
-.style_navbar_content {
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 3px;
-    display: inline-block;
-    padding: 15px 20px;
-    position: relative;
-    font-size: 1.5vw;
-}
-.style_navbar_content:after {    
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    height: 3px;
-    left: 50%;
-    position: absolute;
-    background: #f00;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-}
-.style_navbar_content:hover:after { 
-    width: 100%; 
-    left: 0; 
-}
-.container_navbar_popUp_menu {
-    display: flex;
-    flex-direction: column;
-}
-.hidden_popUp_menu {
-    display: none;
-}
-
-.container_navbar_popUp_menu:hover .hidden_popUp_menu  {
-    display:initial;
-}
-
-.active_navbar_content {
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 3px;
-    padding: 13.5px 20px;
-    border-bottom: 3px solid red;
-    display: flex;
-    align-items: center;
-    font-size: 1.5vw;
-}
-
-
-
 .container_first_object {
     width: 100%;
     display: flex;
@@ -85,13 +6,14 @@ body {
     flex-direction: column;
 }
 
-.style_title {
+.style_main_title {
     font-size: 4vw;
     text-transform: uppercase;
     letter-spacing: 4px;
     color: #595759;
     margin: 30px 0;
     font-weight: 300;
+    text-decoration: none;
 
 }
 .container_logo_main_page {
@@ -174,6 +96,7 @@ body {
 }
 
 .container_footer {
+    background-color: black;
     color: #595759;
     font-size: 1.4vw;
     text-transform: uppercase;
@@ -183,4 +106,20 @@ body {
     justify-content: center;
     align-items: center;
     padding: 2vw 0;
+}
+@media (max-width: 991px) {
+    .container_history_team {
+        display: flex;
+        flex-direction: column;
+        margin: 0 3vw 40px 3vw;
+    }
+    .container_logo_main_page {
+        display: none;
+    }
+    .style_text {
+        font-size: 15px;
+    }
+    .container_footer {
+        font-size: 15px;
+    }
 }

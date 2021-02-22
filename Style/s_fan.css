@@ -1,0 +1,87 @@
+.wrapper_main {
+    margin-top: 30px;
+    width: 100%;
+    padding: 0 10vw;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.style_main_content_title {
+    font-size: 1.5vw;
+    letter-spacing: 3px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 1vw 0;
+}
+
+.container_main_fanmessage {
+    margin: 30px 20%;
+    border-bottom: 1px solid black;
+}
+
+.style_main_fanmessage_text {
+    font-size: 1.3vw;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.container_main_faninfo {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1vw;
+    font-weight: 300;
+    letter-spacing: 2px;
+    padding: 0 2vw;
+}
+
+@media (max-width: 991px) {
+    .wrapper_main {
+        padding: 0 2vw;
+    }
+    .style_main_content_title  {
+        font-size: 16px;
+    }
+    .style_main_fanmessage_text {
+        font-size: 13px;
+    }
+    .container_main_faninfo {
+        font-size: 11px;
+    }
+}
+
+@media (max-width:700px) {
+    .container_main_fanmessage {
+        margin: 30px 0;
+    }
+    .container_footer_content_size {
+        width: 100%;
+    }
+    .container_footer_content {
+        width: 98%;
+    }
+}
+
+.container_footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+    position:fixed;
+}
+
+.container_footer_content {
+    min-width: 48%;
+    max-width: ;
+}
+
+
+#style_footer_content_title {
+    font-size: 21px;
+    letter-spacing: 3px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 1vw 0;
+    display: flex;
+    justify-content: center;
+}
