@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" class="input">
+    <button onclick="addEntry()">click</button>
+    <div class="lol"></div>
+    <script>
+    let list = document.querySelector('.lol')
+    let dat = new Date();
+    function upppp() {
+    let up = JSON.parse(localStorage.getItem("allEntries"))
+    var arrayLength = up.length;
+    for (var i = 0; i < arrayLength; i++) {
+        let template = `<div class="container_main_fanmessage>
+                          <p class="style_main_fanmessage_text">${up[i].title}</p>
+                              <div class="container_main_faninfo">
+                                  <p>${up[i].date}</p>
+                                  <p>Fan2003</p></div></div>`
+                list.insertAdjacentHTML('afterbegin', template)
+    }
+    }
+upppp()
+function addEntry() {
+    var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+    if(existingEntries == null) existingEntries = [];
+    let entryTitle = document.querySelector(".input").value;
+    let entry = {
+        title: entryTitle,
+        date: `${dat.getMonth()}.${dat.getDate()}.${dat.getFullYear()}, ${dat.getHours()}:${dat.getMinutes()}`
+
+    };
+    document.querySelector(".input").value = '';
+    localStorage.setItem("entry", JSON.stringify(entry));
+    existingEntries.push(entry);
+    localStorage.setItem("allEntries", JSON.stringify(existingEntries));
+    let offf = JSON.parse(localStorage.getItem("entry"))
+    let template = `<div class="container_main_fanmessage>
+                          <p class="style_main_fanmessage_text">${offf.title}</p>
+                              <div class="container_main_faninfo">
+                                  <p>${offf.date}</p>
+                                  <p>Fan2003</p></div></div>`
+                list.insertAdjacentHTML('afterbegin', template)
+    
+    };
+
+    </script>
+</body>
+
+</html>
